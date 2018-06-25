@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "179176909177",
+    "firebase_url": "https://defender-a7903.firebaseio.com",
+    "project_id": "defender-a7903",
+    "storage_bucket": "defender-a7903.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:179176909177:android:42060124f405a185",
+        "android_client_info": {
+          "package_name": "com.example.namcb1998.defender"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "179176909177-htq4nihf5fkcbd4ok101takon36b7tap.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.namcb1998.defender",
+            "certificate_hash": "fc541305b746c5746a2e9e00c1c3ca0cbefa064a"
+          }
+        },
+        {
+          "client_id": "179176909177-227hpql2mpmebt86pnip2oujhh1k13ag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUJjYlfnTrB0jSJCsH9wNC-dl391DZMQY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "179176909177-227hpql2mpmebt86pnip2oujhh1k13ag.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
