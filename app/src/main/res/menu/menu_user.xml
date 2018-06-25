@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/switchMenu"
+        android:title="Tôi là hiệp sĩ"></item>
+    <item android:id="@+id/infoMenu"
+        android:title="Thông tin ứng dụng"></item>
+</menu>
