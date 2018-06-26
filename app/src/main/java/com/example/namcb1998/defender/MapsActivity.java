@@ -122,10 +122,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Log.d("CURRENT LOCATION","----------------A---------------------");
 //        float myLat = (float) myLocation.getLatitude();
 //        float myLong = (float) myLocation.getLongitude();
-//        Log.d("My LAT",myLocation.getLatitude()+"");
-//        Log.d("My LONG",myLocation.getLongitude()+"");
+        Log.d("My LAT", String.valueOf(myLat));
+        Log.d("My LONG", String.valueOf(myLong));
 
-        LatLng current = new LatLng( myLat, myLong);
+        LatLng current = new LatLng( (double)myLat, (double)myLong);
 //        // Add a marker in Sydney and move the camera
 //        LatLng sydney = new LatLng(-34, 151);
         mMap.addMarker(new MarkerOptions().position(current).title("It's me"));
