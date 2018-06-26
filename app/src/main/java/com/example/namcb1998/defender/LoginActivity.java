@@ -1,5 +1,6 @@
 package com.example.namcb1998.defender;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -63,6 +64,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
     // need to be done
     private void gotoMapActivity() {
+        Intent intent =new Intent(LoginActivity.this,MapsActivity.class);
+        startActivity(intent);
         Toast.makeText(this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
     }
 
