@@ -14,26 +14,33 @@ import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.content.ContextCompat;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.LocationServices;
+import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.io.Console;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+public class MapsActivity extends FragmentActivity implements OnMapReadyCallback ,
+        OnMarkerClickListener
+        {
 
+    private Button btnHelp;
     private GoogleMap mMap;
     private LocationManager locationManager;
     private LocationListener locationListener;
     private Location myLocation;
-    private double myLat = 0;
-    private double myLong = 0;
+    private double myLat = 10.7805583;
+    private double myLong = 106.6826744;
     @SuppressLint("MissingPermission")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +98,13 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
             }
         }
+        btnHelp = (Button)findViewById(R.id.btnMapActivity);
+        btnHelp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 
     @Override
@@ -128,10 +142,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng current = new LatLng( (double)myLat, (double)myLong);
 //        // Add a marker in Sydney and move the camera
 //        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(current).title("It's me"));
+        mMap.addMarker(new MarkerOptions().position(current).title("cuu dit me may"));
+        mMap.setOnMarkerClickListener(this);
 ////        mMap.addMarker(new MarkerOptions().position(new LatLng(arg0.getLatitude(), arg0.getLongitude())).title("It's Me!"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLng(current));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(current,15));
     }
 
-
-}
+            @Override
+            public boolean onMarkerClick(Marker marker) {
+                btnHelp.setEnabled(true);
+                return false;
+            }
+        }
